@@ -1,0 +1,36 @@
+﻿@model Inlamning.Models.StartPageViewModel
+
+
+@{
+    ViewBag.Title = "ProductCart";
+}
+
+<div class=" col-md-4">
+    <h3>Alla Prdukter</h3>
+    <hr>
+
+    <div id="myDIV">
+
+    </div>
+
+    <div id="mytotel">
+
+    </div>
+
+    <div class="clearfix"></div>
+
+
+    @using (Html.BeginForm("CreateOrder", "Home", FormMethod.Post))
+    {
+       @Html.HiddenFor(model => Model.Cart, new { id = "hiddenCart"})
+
+        <button type="button" id="buy" class=" btn btn-default">Köp</button>
+    }
+       
+
+    <div class="Tabort">
+        <button type="button" class="DeletAray btn btn-default">Tabort</button>
+    </div>
+
+</div>
+<div class="clearfix"></div>

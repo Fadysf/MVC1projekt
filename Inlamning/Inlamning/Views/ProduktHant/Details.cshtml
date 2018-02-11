@@ -1,0 +1,50 @@
+﻿@model Inlamning.Models.Produkt
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produkt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProduktName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProduktName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beskrvning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beskrvning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pris)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pris)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bild)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bild)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
